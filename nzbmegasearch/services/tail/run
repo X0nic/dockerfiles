@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec /sbin/setuser abc tail -f /opt/megasearch/NZBmegasearch/logs/nzbmegasearch.log
