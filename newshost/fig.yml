@@ -1,0 +1,7 @@
+nzbdrone:
+  image: lonix/nzbdrone:2.0
+  ports:
+    - "8989"
+  volumes:
+    # - /etc/localtime:/etc/localtime:ro
+    - config-nzbdrone:/config
