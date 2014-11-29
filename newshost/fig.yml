@@ -5,3 +5,17 @@ nzbdrone:
   volumes:
     # - /etc/localtime:/etc/localtime:ro
     - config-nzbdrone:/config
+nzbget:
+  image: lonix/nzbget:2.0.1
+  ports:
+    - "6789"
+  volumes:
+    # - /etc/localtime:/etc/localtime:ro
+    - config-nzbget:/config
+couch:
+  image: lonix/couchpotato:2.0
+  ports:
+    - "5050"
+  volumes:
+    # - /etc/localtime:/etc/localtime:ro
+    - config-couch:/config
