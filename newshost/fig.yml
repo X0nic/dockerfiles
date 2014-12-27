@@ -12,6 +12,7 @@ nzbget:
   volumes:
     # - /etc/localtime:/etc/localtime:ro
     - config-nzbget:/config
+    - downloads:/downloads
 couch:
   image: lonix/couchpotato:2.0
   ports:
