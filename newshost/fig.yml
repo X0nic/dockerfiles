@@ -6,7 +6,7 @@ nzbdrone:
     # - /etc/localtime:/etc/localtime:ro
     - config-nzbdrone:/config
 nzbget:
-  image: lonix/nzbget:2.0.1
+  image: lonix/nzbget:2.1
   ports:
     - "6789"
   volumes:
