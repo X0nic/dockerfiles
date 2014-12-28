@@ -5,6 +5,8 @@ nzbdrone:
   volumes:
     # - /etc/localtime:/etc/localtime:ro
     - config-nzbdrone:/config
+    - downloads:/downloads
+    - tv:/tv
 nzbget:
   image: lonix/nzbget:2.1
   ports:
