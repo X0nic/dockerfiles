@@ -3,7 +3,7 @@ nzbdrone:
   ports:
     - "8989"
   volumes:
-    # - /etc/localtime:/etc/localtime:ro
+    - /etc/localtime:/etc/localtime:ro
     - config-nzbdrone:/config
     - downloads:/downloads
     - tv:/tv
@@ -12,7 +12,7 @@ nzbget:
   ports:
     - "6789"
   volumes:
-    # - /etc/localtime:/etc/localtime:ro
+    - /etc/localtime:/etc/localtime:ro
     - config-nzbget:/config
     - downloads:/downloads
 couch:
@@ -20,5 +20,5 @@ couch:
   ports:
     - "5050"
   volumes:
-    # - /etc/localtime:/etc/localtime:ro
+    - /etc/localtime:/etc/localtime:ro
     - config-couch:/config
