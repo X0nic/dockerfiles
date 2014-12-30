@@ -1,7 +1,7 @@
 nzbdrone:
   image: lonix/nzbdrone:2.0
   ports:
-    - "8989"
+    - "8989:8989"
   volumes:
     - /etc/localtime:/etc/localtime:ro
     - config-nzbdrone:/config
@@ -10,7 +10,7 @@ nzbdrone:
 nzbget:
   image: lonix/nzbget:2.1
   ports:
-    - "6789"
+    - "6789:6789"
   volumes:
     - /etc/localtime:/etc/localtime:ro
     - config-nzbget:/config
@@ -18,7 +18,7 @@ nzbget:
 couch:
   image: lonix/couchpotato:2.0
   ports:
-    - "5050"
+    - "5050:5050"
   volumes:
     - /etc/localtime:/etc/localtime:ro
     - config-couch:/config
