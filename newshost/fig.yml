@@ -1,5 +1,15 @@
+web:
+  image: nginx
+  ports:
+    - "80:80"
+nzbmegasearch:
+  image: x0nic/nzbmegasearch
+  ports:
+    - "5000:5000"
+  volumes:
+    - config-mega:/config
 nzbdrone:
-  image: lonix/nzbdrone:2.0
+  image: x0nic/sonarr
   ports:
     - "8989:8989"
   volumes:
@@ -7,12 +17,8 @@ nzbdrone:
     - config-nzbdrone:/config
     - downloads:/downloads
     - tv:/tv
-web:
-  image: nginx
-  ports:
-    - "80:80"
 nzbget:
-  image: lonix/nzbget:2.1
+  image: x0nic/nzbget
   ports:
     - "6789:6789"
   volumes:
